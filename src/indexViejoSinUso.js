@@ -1,11 +1,10 @@
-require("dotenv").config();
+
 const express = require("express");
 const colors=require("colors");
 const {v4:uuidv4}=require("uuid")
 
 
-const app = express();
-const port=process.env.PORT ||3000;
+
 
 app.use(express.json()); //esto de .use es un midelware,es como una configuracion que se agrega cuando levanta express.esto hace que si por mas que reciba string si es formto json lo pasa a json
 
@@ -69,6 +68,3 @@ app.delete("/users/:id",(req,res)=>{
             res.json(result);
 })
 
-app.listen(port,()=>{
-    console.log(`----Server on port ${port}----`.green);
-})
