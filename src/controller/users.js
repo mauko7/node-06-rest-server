@@ -22,6 +22,7 @@ const getAllUsers=(req,res)=>{
             name:"Marta"
         }
     ]
+    
     res.json(users);
 };
 /**
@@ -36,7 +37,7 @@ const createUser =(req,res)=>{
         message:"User created",
         user
     }
-    res.status(201).json(result);
+    res.status(201).json(req.body);
     
 };
 /**
